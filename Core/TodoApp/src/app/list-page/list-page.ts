@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-list-pgee',
+  selector: 'app-list-page',
   imports: [],
-  templateUrl: './list-pgee.html',
+  templateUrl: './list-page.html',
   standalone: true,
-  styleUrl: './list-pgee.css'
+  styleUrl: './list-page.css'
 })
 export class ListPage {
 

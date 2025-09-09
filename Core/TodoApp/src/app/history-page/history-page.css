@@ -1,10 +1,47 @@
-.main-row{
-  height: 100vh;
+/* styles.css */
+
+/* Page header */
+.page-header {
+  text-align: center;
+  padding: 30px;
+  margin: 40px auto;
+  border-radius: 50px;
+  background: #a8d7ff;
+  color: navy;
 }
-.main-col{
-  max-width: 500px;
-  min-height: 300px;
+
+/* History box */
+.history-box {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
 }
-.todo-done{
-  text-decoration: line-through;
+.history-box:hover {
+  transform: translateY(-5px);
+}
+.history-box h4 {
+  margin-top: 0;
+  color: #0f2b58;
+}
+.history-box p {
+  margin: 10px 0;
+}
+
+/* Button */
+.open-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #0f2b58;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.open-btn:hover {
+  background: #163a7a;
 }
