@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import {HistoryPage} from './history-page/history-page';
-import {ListPage} from './list-page/list-page';
+import { HistoryPage } from './history-page/history-page';
+import { ListPage } from './list-page/list-page';
 
-export const routes: Routes = [{
-  path:"HistoryPage" , component : HistoryPage},
-  {path:"HistoryPage/ListPage" , component: ListPage}
+export const routes: Routes = [
+  { path: 'history', component: HistoryPage },
+  { path: 'list', component: ListPage },
+  { path: '', redirectTo: '/history', pathMatch: 'full' },
 ];
-

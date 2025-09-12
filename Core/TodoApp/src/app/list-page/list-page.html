@@ -1,35 +1,61 @@
-
-<!-- Page header (big centered title like the picture) -->
+<!-- Page header -->
 <div class="page-header">
-  <div class="brand">
-    <div style="width:600px;height:50px;border-radius:10px;background:aqua;display:flex;align-items:center;justify-content:center;color: navy ;font-weight:700;">To-Do List</div>
-  </div>
+  <div class="brand">To-Do List</div>
 </div>
 
-<!-- Date pill (top-right) -->
-<div class="date-pill" aria-hidden="false" style=" background: #a8d7ff ">
-  <label style="color: #0e1726 ">Date:</label>
-  <!-- this input defaults to today's date -->
-  <input id="date-input" type="date" style="border:none;background:transparent;font-weight:600;">
+<!-- Date pill -->
+<div class="date-pill">
+  <label for="date-input">Date:</label>
+  <input id="date-input" type="date" [(ngModel)]="selectedDate" (ngModelChange)="loadTasks()">
 </div>
 
-<!-- Main centered card -->
+<!-- To-Do Card -->
 <div class="todo-card" role="application" aria-label="To-do list card">
-
-  <!-- add row: input + button -->
   <div class="add-row">
-    <input id="todo-input" type="text" placeholder="Add a todo and press Add or Enter">
-    <button class="btn-add" type="button" onclick="CreateTodo();" style="width:200px;height:50px;border-radius:10px;background:cornflowerblue;display:flex;align-items:center;justify-content:center;color:darkblue ;font-weight:700;">Add Task</button>
+    <input
+      id="todo-input"
+      type="text"
+      placeholder="Add a todo and press Add or Enter"
+      [(ngModel)]="newTodo"
+      (keyup.enter)="createTodo()"
+    >
+    <button class="btn-add" type="button" (click)="createTodo()">Add Task</button>
   </div>
 
-  <!-- The two columns of checkboxes -->
   <div class="todo-grid" id="todo-container">
     <div class="todo-col">
-      <ul id="col1" class="todo-list"></ul>
+      <ul class="todo-list">
+        <li *ngFor="let task of tasks | slice:0:tasks.length/2">
+          <input
+            type="checkbox"
+            [checked]="task.completed"
+            (change)="toggleTaskCompletion(task)"
+          >
+          <span
+            [ngClass]="{ 'completed': task.completed }"
+            contenteditable="true"
+            (blur)="editTask(task.id, getTextFromEvent($event))"
+          >{{ task.text }}</span>
+          <button class="btn-delete" (click)="deleteTask(task.id)">Delete</button>
+        </li>
+      </ul>
     </div>
     <div class="todo-col">
-      <ul id="col2" class="todo-list"></ul>
+      <ul class="todo-list">
+        <li *ngFor="let task of tasks | slice:tasks.length/2">
+          <input
+            type="checkbox"
+            [checked]="task.completed"
+            (change)="toggleTaskCompletion(task)"
+          >
+          <span
+            [ngClass]="{ 'completed': task.completed }"
+            contenteditable="true"
+            (blur)="editTask(task.id, getTextFromEvent($event))"
+          >{{ task.text }}</span>
+          <button class="btn-delete" (click)="deleteTask(task.id)">Delete</button>
+        </li>
+      </ul>
     </div>
   </div>
-
 </div>
