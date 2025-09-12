@@ -7,9 +7,12 @@
 /bazel-out
 
 # Node
-/node_modules
+server/node_modules
 npm-debug.log
 yarn-error.log
+TodoApp/node_modules/
+package-lock.json
+
 
 # IDEs and editors
 .idea/
