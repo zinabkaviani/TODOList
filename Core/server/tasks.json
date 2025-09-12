@@ -1,19 +1,14 @@
 {
   "2025-09-11": [
     {
-      "id": 1757715185830,
-      "text": "lkjhugfdcvbnjml,;lkjuytyt",
-      "completed": true
-    },
-    {
       "id": 1757715443012,
-      "text": "kjhgfcvgbnjkm",
-      "completed": true
+      "text": "write readme",
+      "completed": false
     },
     {
       "id": 1757716028153,
-      "text": "send itkjhgvhbjnkl",
-      "completed": false
+      "text": "send it",
+      "completed": true
     }
   ],
   "2025-09-12": [
@@ -76,36 +71,25 @@
     {
       "id": 1,
       "text": "Refactor frontend components",
-      "completed": false
+      "completed": true
     },
     {
       "id": 2,
       "text": "Optimize database queries",
-      "completed": true
+      "completed": false
     },
     {
       "id": 3,
       "text": "Prepare presentation",
-      "completed": false
+      "completed": true
     }
   ],
-  "2025-10-01": [
-    {
-      "id": 1757715195723,
-      "text": "lkjhgcfx",
-      "completed": false
-    },
-    {
-      "id": 1757715689156,
-      "text": "mjlhkugfhtdgxdfxbcvhbm",
-      "completed": false
-    }
-  ],
+  "2025-10-01": [],
   "2025-11-26": [
     {
       "id": 1757715703302,
       "text": "ngf",
-      "completed": false
+      "completed": true
     }
   ]
 }
