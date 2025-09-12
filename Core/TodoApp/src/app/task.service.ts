@@ -8,22 +8,22 @@ export class TaskService {
 
   constructor(private http: HttpClient) {}
 
-  // Get tasks for a specific date
+  // Get task
   getTasks(date: string): Observable<any> {
     return this.http.get(`${this.apiUrl}?date=${date}`);
   }
 
-  // Get all tasks for history
+  // Get all tasks
   getAllTasks(): Observable<any> {
     return this.http.get(this.apiUrl);
   }
 
-  // Add a task for a specific date
+  // Add a task
   addTask(date: string, task: string): Observable<any> {
     return this.http.post(this.apiUrl, { date, task });
   }
 
-  // Update a task (e.g., mark as completed or edit text)
+  // Update a task
   updateTask(date: string, id: number, text?: string, completed?: boolean): Observable<any> {
     return this.http.put(`${this.apiUrl}/${id}`, { date, text, completed });
   }

@@ -1,6 +1,6 @@
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background-color: #f7f9fc; /* Light gray background */
+  background-color: #f7f9fc;
   margin: 0;
   padding: 0;
   display: flex;
@@ -14,14 +14,14 @@ body {
   margin-top: 50px;
   margin-left: 50px;
   margin-right: 50px;
-  box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+  box-sizing: border-box;
 }
 
 .app-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #a8d7ff; /* Consistent with history page */
+  background-color: #a8d7ff;
   color: #1e3a65;
   padding: 15px 30px;
   border-radius: 10px;
@@ -70,7 +70,7 @@ body {
 
 .btn-add {
   padding: 12px 25px;
-  background-color: #6a95e0; /* Blue color consistent with history page */
+  background-color: #6a95e0;
   color: white;
   font-weight: 600;
   border: none;
@@ -133,7 +133,7 @@ body {
 }
 
 .btn-delete svg {
-  fill: #e06a6a; /* Red color for delete icon */
+  fill: #e06a6a;
   transition: fill 0.2s;
 }
 

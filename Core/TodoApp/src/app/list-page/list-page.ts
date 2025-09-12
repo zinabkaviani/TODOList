@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TaskService } from '../task.service';
-import { CommonModule } from '@angular/common'; // Import CommonModule
-import { FormsModule } from '@angular/forms'; // Import FormsModule for ngModel
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-list-page',
   templateUrl: './list-page.html',
   styleUrls: ['./list-page.css'],
   standalone: true,
-  imports: [CommonModule, FormsModule], // Add CommonModule and FormsModule
+  imports: [CommonModule, FormsModule],
 })
 export class ListPage implements OnInit {
   newTodo: string = '';
@@ -19,7 +19,6 @@ export class ListPage implements OnInit {
   constructor(private route: ActivatedRoute, private taskService: TaskService) {}
 
   ngOnInit() {
-    // Get date from route parameter
     this.route.params.subscribe(params => {
       this.selectedDate = params['date'] || new Date().toISOString().split('T')[0];
       this.loadTasks();

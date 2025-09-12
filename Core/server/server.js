@@ -4,7 +4,7 @@ import tasksRouter from './routes/tasks.js';
 import cors from 'cors';
 
 const app = express();
-app.use(cors()); // Enable CORS
+app.use(cors()); 
 app.use(bodyParser.json());
 
 app.use('/api/tasks', tasksRouter);

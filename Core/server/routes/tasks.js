@@ -5,28 +5,25 @@ import { fileURLToPath } from 'url';
 
 const router = express.Router();
 
-// Resolve path to tasks.json
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const tasksFilePath = path.join(__dirname, '../tasks.json');
 
-// Helper function to read tasks from tasks.json
+// Helper functions
 async function readTasks() {
   try {
     const data = await fs.readFile(tasksFilePath, 'utf-8');
     return JSON.parse(data);
   } catch (error) {
-    // If file doesn't exist or is empty, return empty object
     return {};
   }
 }
 
-// Helper function to write tasks to tasks.json
 async function writeTasks(tasks) {
   await fs.writeFile(tasksFilePath, JSON.stringify(tasks, null, 2), 'utf-8');
 }
 
-// GET tasks for a specific date or all tasks
+// GET tasks 
 router.get('/', async (req, res) => {
   const tasks = await readTasks();
   const { date } = req.query;
@@ -52,7 +49,7 @@ router.post('/', async (req, res) => {
   res.json(tasks[date]);
 });
 
-// PUT to update a task (e.g., mark as completed or edit text)
+// PUT to update a task 
 router.put('/:id', async (req, res) => {
   const { id } = req.params;
   const { date, text, completed } = req.body;
@@ -73,7 +70,7 @@ router.put('/:id', async (req, res) => {
 // DELETE a task
 router.delete('/:id', async (req, res) => {
   const { id } = req.params;
-  const { date } = req.query;  // ✅ use query instead of body
+  const { date } = req.query;  
   const tasks = await readTasks();
 
   if (!date || !tasks[date]) {
