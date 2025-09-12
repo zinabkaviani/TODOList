@@ -73,14 +73,17 @@ router.put('/:id', async (req, res) => {
 // DELETE a task
 router.delete('/:id', async (req, res) => {
   const { id } = req.params;
-  const { date } = req.body;
+  const { date } = req.query;  // ✅ use query instead of body
   const tasks = await readTasks();
+
   if (!date || !tasks[date]) {
     return res.status(404).json({ error: 'Date not found' });
   }
+
   tasks[date] = tasks[date].filter(t => t.id != id);
   await writeTasks(tasks);
   res.json(tasks[date]);
 });
+
 
 export default router;

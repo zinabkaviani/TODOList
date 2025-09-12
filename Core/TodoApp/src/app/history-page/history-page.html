@@ -12,7 +12,7 @@
         <p *ngFor="let task of entry.tasks | slice:0:3">
           {{ task.completed ? '✔' : '⬜' }} {{ task.text }}
         </p>
-        <a class="open-btn" (click)="openDay(entry.date)">Open Day</a>
+          <a class="open-btn" [routerLink]="['/list', entry.date]">Open Day</a>
       </div>
     </div>
   </div>

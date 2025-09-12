@@ -1,9 +1,111 @@
-[
-  {
-    "date": "2025-09-11",
-    "tasks": [
-      { "id": 1, "text": "Finish backend", "done": false },
-      { "id": 2, "text": "Connect frontend", "done": true }
-    ]
-  }
-]
+{
+  "2025-09-11": [
+    {
+      "id": 1757715185830,
+      "text": "lkjhugfdcvbnjml,;lkjuytyt",
+      "completed": true
+    },
+    {
+      "id": 1757715443012,
+      "text": "kjhgfcvgbnjkm",
+      "completed": false
+    },
+    {
+      "id": 1757716028153,
+      "text": "send it",
+      "completed": false
+    }
+  ],
+  "2025-09-12": [
+    {
+      "id": 1,
+      "text": "Design database schema",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "text": "Implement authentication",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "text": "Set up CI/CD pipeline",
+      "completed": true
+    },
+    {
+      "id": 1757715739547,
+      "text": "sending these things to your personal chanel",
+      "completed": true
+    }
+  ],
+  "2025-09-13": [
+    {
+      "id": 1,
+      "text": "Fix login bug",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "text": "Write unit tests",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "text": "Deploy staging environment",
+      "completed": true
+    }
+  ],
+  "2025-09-14": [
+    {
+      "id": 1,
+      "text": "Code review for PR #42",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "text": "Update README",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "text": "Plan next sprint",
+      "completed": false
+    }
+  ],
+  "2025-09-15": [
+    {
+      "id": 1,
+      "text": "Refactor frontend components",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "text": "Optimize database queries",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "text": "Prepare presentation",
+      "completed": false
+    }
+  ],
+  "2025-10-01": [
+    {
+      "id": 1757715195723,
+      "text": "lkjhgcfx",
+      "completed": false
+    },
+    {
+      "id": 1757715689156,
+      "text": "mjlhkugfhtdgxdfxbcvhbm",
+      "completed": false
+    }
+  ],
+  "2025-11-26": [
+    {
+      "id": 1757715703302,
+      "text": "ngf",
+      "completed": false
+    }
+  ]
+}

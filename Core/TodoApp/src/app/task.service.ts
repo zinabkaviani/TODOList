@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class TaskService {
-  private apiUrl = 'http://localhost:3000/api/tasks';
+  private apiUrl = 'http://localhost:3001/api/tasks';
 
   constructor(private http: HttpClient) {}
 
@@ -30,6 +30,7 @@ export class TaskService {
 
   // Delete a task
   deleteTask(date: string, id: number): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/${id}`, { body: { date } });
+    return this.http.delete(`${this.apiUrl}/${id}?date=${date}`);
   }
+
 }

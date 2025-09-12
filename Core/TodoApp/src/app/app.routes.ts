@@ -4,6 +4,6 @@ import { ListPage } from './list-page/list-page';
 
 export const routes: Routes = [
   { path: 'history', component: HistoryPage },
-  { path: 'list', component: ListPage },
+  { path: 'list/:date', component: ListPage },
   { path: '', redirectTo: '/history', pathMatch: 'full' },
 ];

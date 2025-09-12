@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common'; // Import CommonModule
 import { FormsModule } from '@angular/forms'; // Import FormsModule for ngModel
 
 @Component({
-  selector: 'app-list_page',
+  selector: 'app-list-page',
   templateUrl: './list-page.html',
   styleUrls: ['./list-page.css'],
   standalone: true,
