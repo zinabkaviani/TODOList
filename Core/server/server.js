@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import tasksRouter from './routes/tasks.js';
+import tasksRouter from './routes/taskRoutes.js';
 import cors from 'cors';
 
 const app = express();
