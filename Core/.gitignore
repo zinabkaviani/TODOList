@@ -44,6 +44,7 @@ testem.log
 .DS_Store
 Thumbs.db
 
-
+TodoApp/.angular/cache
+TodoApp/.angular
 # Backend local DB
 core/tasks.json
