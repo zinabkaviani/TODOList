@@ -47,4 +47,4 @@ Core/TodoApp/.angular/cache/
 
 TodoApp/.angular
 # Backend local DB
-core/tasks.json
+server/tasks.json
